@@ -1,7 +1,11 @@
 # fujifilm_movie_hevc_re_encoding_with_GPU
 Fujifilm recorded movie (H.265, HEVC)  re-encoding scripts by using ffmpeg, exiftool, NVIDIA(GPU)
-* Re-encoding script by ffmpeg by using NVIDIA GPU
+* Re-encoding script by ffmpeg by using NVIDIA GPU from high bitrate source file to smaller file size target.
 * From H.265(HEVC) input to H.265(HEVC) output
+
+# Assumed input movie file format
+
+* H.265(HEVC), 4K60P, 100~200 Mbps, YUV4:2:0 (10bit) by Fujifilm X-T3, X-T4
 
 # Environment
 * Windows 10 (Pro)
