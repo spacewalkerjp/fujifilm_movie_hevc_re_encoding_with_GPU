@@ -16,11 +16,11 @@ for($i=0; $i -lt $movie_filepath_array.Length; $i ++){
 	Write-Host ('Output filename = ' + $outputmoviefile)
 
 	#NVIDIA HEVCでエンコード：だいたい60~70Mbps, 60p, 60p : metadataはだいたいコピー：しかしGPSはコピーされない。
+	# ffmpeg sample : VCODEC = HEVC_NVENC(NVIDIA GPU H.265 HEVC), pix_fmt (YUV420 10bit = p010le), ACODE = pcm_s24le
+	# Set for quality : -cq, -preset, -qmin, -qmax
 	.$ffmpegexe -i $moviefile -map_metadata 0:g -vcodec hevc_nvenc -cq 50 -preset slow -qmin 1 -qmax 20 -pix_fmt p010le -acodec pcm_s24le -r 60 $outputmoviefile 
 
-	#EXIF TOOLでGPSも全部コピー
+	# copy all meta data including GPS tag by exiftool from source movie to target movie
 	.$exiftoolexe -overwrite_original -tagsfromfile $moviefile -all:all>all $outputmoviefile
-
-
 }
 
