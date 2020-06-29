@@ -21,5 +21,5 @@ Fujifilm recorded movie (H.265, HEVC)  re-encoding scripts by using ffmpeg, exif
 * [3] Download exiftool.exe and ffmpeg.exe (Windows executable binary) into the working folder.
 * [3] Launch powershell on the working folder.
 * [4] Create output folder as `out` (folder name)
-* [5] .\allsequence.ps1
+* [5] `.\allsequence.ps1`
 * [6] If you want to change target movie quality (bitrate, ..), change some parateters for ffmpeg in `ffmpegreencondingNVENC.ps1` script. for example, -cq, -preset, -qmin, -qmax, and so on.
