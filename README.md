@@ -13,3 +13,10 @@ Fujifilm recorded movie (H.265, HEVC)  re-encoding scripts by using ffmpeg, exif
 * EXIFTOOL：exiftool.exe (Windows binary : ExifTool Version Number : 11.99 )
 * ffmpeg (Windows binary : ffmpeg-20200620-29ea4e1-win64-static.zip )
 * Author H/W environment (Ref) : AMD Ryzen 5 3600, NVIDIA GeForce GTX 1070(*if want to use GPU for ffmpeg encoding)
+
+# How to use
+* [1] Copy the source movie files to a working folder. Don't forget to copy to avoid mistaking deleting.
+* [2] Clone this repo's powershell scripts(.ps1) into the working folder
+* [3] Launch powershell on the working folder.
+* [4] Create output folder as `out` (folder name)
+* [5] .\allsequence.ps1
